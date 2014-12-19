@@ -106,7 +106,8 @@ var HashLocation = {
 
   replace: function (path) {
     _actionType = LocationActions.REPLACE;
-    window.location.replace(window.location.pathname + '#' + Path.encode(path));
+    // window.location.replace(window.location.pathname + '#' + Path.encode(path));
+    window.location.hash = Path.encode(path);
   },
 
   pop: function () {
